@@ -1,8 +1,18 @@
 <?php
 
 require_once 'app/core/Core.php';
+
+//classe conexao
+require_once 'lib/Database/Connection.php';
+
+//classes controller
 require_once 'app/controller/HomeController.php';
 require_once 'app/controller/ErroController.php';
+
+//Model
+require_once 'app/model/Postagem.php';
+
+require_once 'vendor/autoload.php';
 
 $tamplate = file_get_contents('app/template/estrutura.html');
 

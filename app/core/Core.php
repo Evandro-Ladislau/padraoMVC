@@ -18,6 +18,7 @@ class Core {
             $controller = 'ErroController';
         }
 
-        call_user_func_array(array(new $controller, $acao), array()); //cria um objeto e chama a função de forma dinamica
+        call_user_func_array(array(new $controller, $acao), array()); 
+        //cria um objeto e chama a função de forma dinamica
     }
 }
