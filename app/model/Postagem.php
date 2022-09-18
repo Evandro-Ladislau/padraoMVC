@@ -27,4 +27,21 @@ class Postagem
 
         return $resultado;
     }
+
+    public static function selecionarPorId($idPost)
+    {
+        $conn = Connection::getConn();
+
+        $sql = "SELECT * FROM postagem WHERE id=:id";
+        $sql = $conn->prepare($sql);
+        $sql->bindValue(':id', $idPost, PDO::PARAM_INT);
+        $sql->execute();
+        $resultado = $sql->fetchObject('Postagem');
+
+        if (!$resultado) {
+            throw new Exception("Não foi encontrado nenhum registro no banco de dados"); 
+        }
+
+        return $resultado;
+    }
 }
