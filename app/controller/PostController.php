@@ -10,6 +10,7 @@ class PostController {
 
             $postagem = Postagem::selecionarPorId($params);
             
+            //var_dump($postagem);
 
             //twig
             $loader = new \Twig\Loader\FilesystemLoader('app/view');
@@ -22,6 +23,7 @@ class PostController {
 
             $parametros['titulo'] = $postagem->titulo;
             $parametros['conteudo'] = $postagem->conteudo;
+            $parametros['comentarios'] = $postagem->comentarios;
 
             $conteudo = $template->render($parametros);
             echo $conteudo;

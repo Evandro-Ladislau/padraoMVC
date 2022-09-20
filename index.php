@@ -9,9 +9,11 @@ require_once 'lib/Database/Connection.php';
 require_once 'app/controller/HomeController.php';
 require_once 'app/controller/ErroController.php';
 require_once 'app/controller/PostController.php';
+require_once 'app/controller/SobreController.php';
 
 //Model
 require_once 'app/model/Postagem.php';
+require_once 'app/model/Comentario.php';
 
 require_once 'vendor/autoload.php';
 

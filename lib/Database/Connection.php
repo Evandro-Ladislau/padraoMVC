@@ -13,6 +13,8 @@ abstract  class Connection
             //aqui o self foi usado porque esse metodo é statico, se não fosse, seria necessario usar a variavel $this->
             self::$conn = new PDO('mysql: host=localhost; dbname=mvc-site;', 'root', '');
             return self::$conn;
+        }else{
+            return self::$conn;
         }
         
 
